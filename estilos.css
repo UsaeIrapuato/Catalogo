@@ -36,8 +36,8 @@ header {
 
 .Logo-Superior img {
     height: 125px; /* Ajusta según necesidad */
-    width: 75px;
-    max-witdh:70%;
+    width: 65px;
+    max-witdh:100%;
 }
 /*Barra de navegacion*/
 nav {
