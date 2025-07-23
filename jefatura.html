@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='/css/estilos.css'>
+     <!-- Titulo de la pagina -->
+    <title>Jefatura</title>
+
+    <style>
+    .tarjeta-general:not(.superposicion .tarjeta-general)::after {
+    content: "";
+    display: block;
+    height: 15px;
+    background-color: #1f1f24;}
+
+    .superposicion .tarjeta-general {
+      border: 10px solid #1f1f24; }
+
+    .tarjetas-container {
+      place-items: center; }
+
+    .Logo-Superior img {
+    height: 100px; 
+    width: auto;}
+  </style>
+</head>
+<body>
+  
+    <header>
+      <div class="Logo-Superior">
+        <img src="/Imagenes/LOGO SEG 2024.png" alt="Logo Institucional">
+      </div>
+      <!-- Titulo superior de la pagina -->
+        <h1>Jefatura</h1>
+        <!-- Navegador de la pagina -->
+        <nav style="font-size: 20px;">
+          <a href="index .html">Inicio</a>
+          <div class="dropdown" id="dropdown">
+              <a href="#">Areas</a>
+              <div class="dropdown-content" id="dropdown-content">
+                  <a href="acreditacion.html">Subjefatura de Acreditación e Incorporación</a>
+                  <a href="informatica.html">Subjefatura Informática</a>
+                  <a href="planeacion.html">Subjefatura Planeación</a>
+                  <a href="eficiencia.html">Subjefatura de Eficiencia Administrativa</a>
+                  <a href="servicio.html">Subjefatura de Servicios al Personal</a>
+                  <a href="promocion.html">Subjefatura de Promoción y Servicio Profesional al Docente</a>
+                  <a href="mejora.html">Subjefatura de Mejora de Procesos</a>
+                  <a href="jefatura.html">Jefatura</a>
+              </div>
+          </div>
+          <a href="#Pie">Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+        <!-- Encabezado de las pagina  -->
+        <h2>Trámites</h2>
+        <div class="tarjetas-container">
+          <div class="tarjeta-general">
+            <div class="texto">
+              <!-- Titulo del tramite en las tarjetas -->
+              <strong>Seguimiento a solicitudes de necesidades diversas.</strong>
+            </div>
+            <div class="contenido-completo" style="display: none;">
+              <p>
+                <!-- Informacion dentro de las tarjetas superpuestas -->
+                <strong>Requisitos:</strong> <br>
+                1. Oficio de solicitud. <br>
+                <strong>Modalidad de atención:</strong> <br>
+                Presencial. <br>
+                <strong>Costo:</strong> <br>
+                Sin costo. <br>
+                <strong>Responsable de la atención:</strong> <br>
+                Carolina. <br>
+                <strong>Tiempo de respuesta:</strong> <br>
+                En el momento o según la necesidad. <br>
+                <strong>Calendario:</strong> <br>
+                Días hábiles del año en curso. <br>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="superposicion" id="superposicion">
+          <div class="tarjeta-general" id="tarjetaSuperpuesta">
+              <div class="texto"></div>
+          </div>
+        </div>
+    </main>
+
+    <div id="Pie">
+        <footer>
+          <!-- Informacion de contacto y derechos reservados -->
+            <p>&copy; 2025 Gobierno Nacional. Todos los derechos reservados.</p>
+            <p>
+              Vialidad Interior sobre Av. Siglo XXI No. 412, Los Sauces, Irapuato, Gto. México, C.P. 36823<br>
+                Tel. (462) 607 4520, <a href="https://www.seg.guanajuato.gob.mx/SitePages/Home.aspx" target="_blank">seg.guanajuato.gob.mx</a>
+            </p>
+        
+            <div class="Redes-Sociales">
+              <!-- Redes sociales del Gobierno de Guanajuato -->
+                <a href="https://www.facebook.com/educaciongente" target="_blank" title="Facebook">
+                    <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook">Secretaría de Educación de Guanajuato SEG 
+                </a>
+                <a href="https://x.com/educaciongente" target="_blank" title="X (Twitter)">
+                    <img src="https://cdn-icons-png.flaticon.com/24/733/733579.png" alt="X (Twitter)">@EducacionSEG
+                </a>
+                <a href="https://www.instagram.com/educaciongente/" target="_blank" title="Instagram">
+                    <img src="https://cdn-icons-png.flaticon.com/24/733/733558.png" alt="Instagram">@educaciongto
+                </a>
+                <a href="https://www.tiktok.com/@gobgente" target="_blank" title="TikTok">
+                    <img src="https://cdn-icons-png.flaticon.com/24/3046/3046122.png" alt="TikTok">@educaciongto
+                </a>
+                <a href="https://www.youtube.com/@educaciongente" target="_blank" title="YouTube">
+                    <img src="https://cdn-icons-png.flaticon.com/24/1384/1384060.png" alt="YouTube">@EducacionGuanajuato
+                </a>
+            </div>
+            <div class="Logo-Derecha">
+              <img src="/Imagenes/LOGO MAS GOBIERNO DE LA GENTE.png" alt="Logo Institucional">
+            </div>
+        </footer>
+        </div>
+
+        <script>
+            const tarjetas = document.querySelectorAll('.tarjeta-general');
+             const superposicion = document.getElementById('superposicion');
+             const tarjetaSuperpuesta = document.getElementById('tarjetaSuperpuesta');
+             const textoSuperpuesto = tarjetaSuperpuesta.querySelector('.texto');
+       
+             tarjetas.forEach(tarjeta => {
+             tarjeta.addEventListener('click', () => {
+             const texto = tarjeta.querySelector('.texto').innerHTML;
+             const contenido = tarjeta.querySelector('.contenido-completo')?.innerHTML || '';
+             textoSuperpuesto.innerHTML = texto + '<br><br>' + contenido;
+             superposicion.classList.add('activa');
+           });
+         });
+       
+         superposicion.addEventListener('click', () => {
+           superposicion.classList.remove('activa');
+         });
+       
+               const dropdown = document.getElementById('dropdown');
+               const dropdownContent = document.getElementById('dropdown-content');
+       
+               dropdown.addEventListener('mouseenter', () => {
+               dropdownContent.style.display = 'block';
+               });
+       
+               dropdown.addEventListener('mouseleave', () => {
+               dropdownContent.style.display = 'none';
+               });
+           </script>
+  </body>
+  </html>
