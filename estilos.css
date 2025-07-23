@@ -1,0 +1,469 @@
+/*Index*/
+html, body {
+    height: 100%;
+    margin: 0;
+}
+* {
+    box-sizing: border-box;
+}
+
+.Principal {
+    flex: 1;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    background-color: #f8f9fa;
+    color: #333;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #2363ab;
+    color: white;
+    width: 100%;
+    padding: 15px 15px 5px 15px;
+    text-align: center;
+    margin-bottom: 0;
+}
+.Logo-Superior {
+    position: absolute;
+    top: 20px;
+}
+
+.Logo-Superior img {
+    height: 130px; /* Ajusta según necesidad */
+    width: auto;
+}
+/*Barra de navegacion*/
+nav {
+    background-color: #2363ab;
+    width: 100%;
+    padding: 5px 10px 10px 10px; 
+    text-align: center;
+    margin-top: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+}
+
+nav a i {
+    margin-right: 5px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #2363ab;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+/*Contenido*/
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.instalaciones{
+    position: relative;
+}
+.mapa{
+    position: relative; 
+    padding-bottom: 75%; 
+    height: 0; 
+    overflow: hidden;
+}
+.ubicacion{
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    border:0;
+}
+.link{
+    position: absolute;
+    width: 1px; 
+    height: 1px; 
+    padding: 0; 
+    margin: -1px; 
+    overflow: hidden; 
+    clip: rect(0,0,0,0); 
+    white-space: nowrap; 
+    border: 0;
+}
+.info-box {
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    width: 45%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+/*Cartas*/
+.person-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+    justify-items: center;
+}
+.person-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.2s;
+    width: 100%;
+    max-width: 250px;
+}
+.person-card:hover {
+    transform: translateY(-5px);
+}
+.person-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+.person-card h4 {
+    margin: 10px 0 5px;
+}
+.person-card p {
+    margin: 0;
+    color: #555;
+    font-size: 0.9em;
+}
+.superposicion {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px; /* para móviles */
+  overflow-y: auto;
+}
+
+.superposicion.activa {
+  display: flex;
+}
+
+.modal-contenido {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-contenido .tarjeta {
+  width: 1000px;
+  height: 700px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Encabezado institucional */
+.modal-contenido .encabezado {
+  background-color: #0056b3;
+  color: white;
+  padding: 50px;
+  text-align: right;
+  position: relative;
+  line-height: 1.6;
+}
+
+.modal-contenido .encabezado img {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  height: 60px;
+}
+
+.modal-contenido .encabezado h1 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.modal-contenido .encabezado h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+/* Contenido perfil: imagen + datos en fila */
+.modal-contenido .perfil {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.modal-contenido .perfil img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  outline: 4px solid #0056b3;
+  flex-shrink: 0;
+}
+
+.modal-contenido .perfil .datos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal-contenido .perfil .nombre {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #004080;
+}
+
+.modal-contenido .perfil .puesto {
+  font-size: 1em;
+  color: black;
+  background-color: #cfcfcf;
+  box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  margin-top: 5px;
+  display: inline-block;
+  width: fit-content;
+}
+
+/* Tabla */
+.modal-contenido .tabla table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.modal-contenido .tabla th,
+.modal-contenido .tabla td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.modal-contenido .tabla th {
+  background-color: #f0f0f0;
+  color: #004080;
+}
+
+.modal-contenido .email-cell {
+  color: #666;
+  font-style: italic;
+}
+
+
+/* Responsive para móvil */
+@media (max-width: 600px) {
+  .modal-contenido .tarjeta {
+    padding: 10px;
+  }
+
+  .modal-contenido .encabezado h1,
+  .modal-contenido .encabezado h2 {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .modal-contenido .perfil img {
+    width: 80px;
+    height: 80px;
+    top: -40px;
+  }
+
+  .modal-contenido .nombre,
+  .modal-contenido .puesto {
+    font-size: 0.95em;
+  }
+}
+
+
+
+/* Botón cerrar */
+.cerrar {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  font-size: 45px;
+  color: #ffffff;
+  cursor: pointer;
+}
+/*Pie de Pagina*/
+footer {
+    background-color: #2363ab;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.redes-sociales a {
+    display: inline-block;
+    color: white;
+    margin: 0 10px;
+    text-decoration: none !important;
+    transition: transform 0.2s;
+}
+
+.redes-sociales a:hover {
+    transform: scale(1.2);
+}
+
+.redes-sociales img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+.Redes-Sociales a:link,
+.Redes-Sociales a:visited,
+.Redes-Sociales a:hover,
+.Redes-Sociales a:active {
+    color: white;
+    text-decoration: none;
+}
+
+.Logo-Derecha {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
+
+.Logo-Derecha img {
+    height: 130px; /* Aumenta el tamaño aquí */
+    width: auto;
+    align-items: center;
+}
+/*Areas*/
+.principal {
+    width: 80%;
+    margin: 20px auto;
+    border: none;
+}
+
+.principal th {
+    font-size: 20px;
+    text-align: center;
+}
+
+h2,p{
+    text-align: center;
+}
+/*Tarjetas de Informacion*/
+.tarjetas-container {
+    display: grid;
+    /* grid-template-columns: repeat(4, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.tarjeta-general {
+    width: 220px;
+    height: 170px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    background-color: #fff;
+    position: relative;
+}
+
+.tarjeta-general .texto {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #fff;
+    
+}
+.superposicion {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.superposicion.activa {
+    display: flex;
+}
+
+.superposicion .tarjeta-general {
+    width: 90%;
+    max-width: 500px;
+    height: 600px;
+    transform: scale(1.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+/*Resolucion para dispositivos*/
+@media (min-width: 200px) and (max-width: 439px) {
+    .info-box{
+        width: 100%;
+    }
+}
+
