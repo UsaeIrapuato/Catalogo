@@ -50,10 +50,15 @@ body {
     top: 20px;
 }
 .Logo-Derecha {
+    float;
+    right;
+}
+.2Logo-Derecha {
     position: absolute;
     left: 500px;
     top: 20px;
 }
+
 .logo-contenedor h1 {
     flex: 1 1 100%;
     font-size: 1.6em;
