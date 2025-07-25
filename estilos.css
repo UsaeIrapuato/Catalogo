@@ -21,23 +21,65 @@ body {
     flex-direction: column;
 }
 
-header {
+.encabezado {
     background-color: #2363ab;
     color: white;
     width: 100%;
-    padding: 15px 15px 5px 15px;
+    padding: 10px 15px;
     text-align: center;
     margin-bottom: 0;
 }
-.Logo-Superior {
-    position: absolute;
-    top: 20px;
+.logo-contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
 }
-
-.Logo-Superior img {
-    height: 125px; /* Ajusta según necesidad */
-    width: 125px;
-    max-witdh:100%;
+.Logo-Superior img,
+.Logo-Derecha img {
+    height: 100px;
+    width: auto;
+    max-width: 100%;
+}
+.Logo-Superior img{
+    position: absolute;
+    left: 15px;
+    top: 10px;
+}
+.Logo-Derecha {
+    position: absolute;
+    right: 15px;
+}
+.logo-contenedor h1 {
+    flex: 1 1 100%;
+    font-size: 1.6em;
+    margin: 10px 0;
+}
+@media (max-width: 768px) {
+    .Logo-Superior,
+    .Logo-Derecha {
+        position: static; /* ← Devuelve al flujo normal */
+        margin: 10px 0;
+        text-align: center;
+    }
+    .Logo-Superior{
+    margin: 50px 0;
+    }
+    .logo-contenedor {
+        flex-direction: column;
+        position: static;
+    }
+    .logo-contenedor h1 {
+        order: 2;
+        font-size: 1.3em;
+    }
+    .Logo-Superior {
+        order: 1;
+    }
+    .Logo-Derecha {
+        order: 3;
+    }
 }
 /*Barra de navegacion*/
 nav {
