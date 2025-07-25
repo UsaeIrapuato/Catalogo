@@ -49,7 +49,7 @@ body {
 }
 .Logo-Derecha {
     position: absolute;
-    right: 55px;
+    right: 1px;
 }
 .logo-contenedor h1 {
     flex: 1 1 100%;
