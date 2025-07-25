@@ -45,12 +45,12 @@ body {
 }
 .Logo-Superior img{
     position: absolute;
-    left: 15px;
+    left: 20px;
     top: 20px;
 }
 .Logo-Derecha {
     position: absolute;
-    left: 1200px;
+    left: 1500px;
     top: 20px;
 }
 .logo-contenedor h1 {
