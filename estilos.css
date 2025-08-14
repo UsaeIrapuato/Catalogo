@@ -481,6 +481,7 @@ h2,p{
     overflow-y: auto;
     padding: 10px;
     background-color: #fff;
+    text-align: center
     
 }
 .superposicion {
@@ -516,4 +517,5 @@ h2,p{
         width: 100%;
     }
 }
+
 
