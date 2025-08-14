@@ -474,7 +474,7 @@ h2,p{
     cursor: pointer;
     background-color: #fff;
     position: relative;
-    text-align: center
+
 }
 
 .tarjeta-general .texto {
@@ -482,7 +482,7 @@ h2,p{
     overflow-y: auto;
     padding: 10px;
     background-color: #fff;
-    text-align: center
+    
     
 }
 .superposicion {
@@ -518,6 +518,7 @@ h2,p{
         width: 100%;
     }
 }
+
 
 
 
