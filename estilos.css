@@ -154,7 +154,7 @@ nav a i {
 .ubicacion{
     position: absolute;
     top: 0; 
-    left: 3; 
+    left: 1; 
     width: 85%; 
     height: 85%; 
     border:0;
@@ -518,6 +518,7 @@ h2,p{
         width: 100%;
     }
 }
+
 
 
 
