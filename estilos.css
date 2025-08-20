@@ -166,8 +166,8 @@ nav a i {
     position: relative;
     /*width:150px; */
     /*height:250px; */
-    object-fit: scale-down;
-    /*object-fit: contain; */
+    /*object-fit: scale-down; */
+    object-fit: contain;
     /*padding-bottom: 75%; */
     /*top: 0; */
     /*left: 0; */
@@ -536,6 +536,7 @@ h2,p{
         width: 100%;
     }
 }
+
 
 
 
