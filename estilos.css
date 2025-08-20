@@ -164,7 +164,7 @@ nav a i {
 
 .noticias{
     position: relative;
-    object-fit: cover;
+    object-fit: contain;
     /* padding-bottom: 75%; */
     /*top: 0; */
     /*left: 0; */
@@ -533,6 +533,7 @@ h2,p{
         width: 100%;
     }
 }
+
 
 
 
