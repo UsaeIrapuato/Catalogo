@@ -139,6 +139,7 @@ nav a i {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    justify-content: center;
     padding: 20px;
 }
 
@@ -146,9 +147,7 @@ nav a i {
     position: relative;
 }
 .mapa{
-    position: relative; 
-    text-align: center;
-    padding-left: 5%;
+    position: relative;
     padding-bottom: 75%; 
     height: 0; 
     overflow: hidden;
@@ -520,6 +519,7 @@ h2,p{
         width: 100%;
     }
 }
+
 
 
 
