@@ -145,12 +145,14 @@ nav a i {
 .instalaciones{
     position: relative;
 }
+
 .mapa{
     position: relative;
     padding-bottom: 75%; 
     height: 0; 
     overflow: hidden;
 }
+
 .ubicacion{
     position: absolute;
     top: 0; 
@@ -159,6 +161,17 @@ nav a i {
     height: 75%; 
     border:0;
 }
+
+.noticias{
+    position: relative;
+    padding-bottom: 75%;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 50%; 
+    border:0;
+}
+
 .link{
     position: absolute;
     width: 1px; 
@@ -518,6 +531,7 @@ h2,p{
         width: 100%;
     }
 }
+
 
 
 
