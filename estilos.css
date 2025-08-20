@@ -171,8 +171,8 @@ nav a i {
     /*padding-bottom: 75%; */
     /*top: 0; */
     /*left: 0; */
-    width: 120%;
-    height: 50%; 
+    width: 100%;
+    height: 75%; 
     /*border:0; */
     overflow: hidden;
 }
@@ -536,6 +536,7 @@ h2,p{
         width: 100%;
     }
 }
+
 
 
 
