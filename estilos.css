@@ -140,6 +140,7 @@ nav a i {
     flex-wrap: wrap;
     justify-content: space-around;
     justify-content: center;
+    text-align: center;
     padding: 20px;
 }
 
@@ -521,6 +522,7 @@ h2,p{
         width: 100%;
     }
 }
+
 
 
 
