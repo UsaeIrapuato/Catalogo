@@ -172,7 +172,7 @@ nav a i {
     /*top: 0; */
     /*left: 0; */
     width: 100%;
-    height: 15%; 
+    height: 50%; 
     /*border:0; */
     overflow: hidden;
 }
@@ -536,6 +536,7 @@ h2,p{
         width: 100%;
     }
 }
+
 
 
 
