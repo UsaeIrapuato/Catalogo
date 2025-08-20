@@ -149,6 +149,7 @@ nav a i {
 }
 .mapa{
     position: relative;
+    justify-content: center;
     padding-bottom: 75%; 
     height: 0; 
     overflow: hidden;
@@ -520,6 +521,7 @@ h2,p{
         width: 100%;
     }
 }
+
 
 
 
