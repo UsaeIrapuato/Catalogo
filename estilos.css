@@ -171,6 +171,7 @@ nav a i {
     height: 50%; 
     border:0;
     overflow: hidden;
+    object-fit: cover;
 }
 
 .link{
@@ -532,6 +533,7 @@ h2,p{
         width: 100%;
     }
 }
+
 
 
 
