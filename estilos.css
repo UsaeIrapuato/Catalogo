@@ -170,6 +170,7 @@ nav a i {
     width: 100%; 
     height: 50%; 
     border:0;
+    overflow: hidden;
 }
 
 .link{
@@ -531,6 +532,7 @@ h2,p{
         width: 100%;
     }
 }
+
 
 
 
