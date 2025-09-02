@@ -51,14 +51,14 @@ body {
 		opacity: 0.1;
 	}
 	35%, 65% {
-		background-image: url(BRENDAPOZOS.jpg);
+		background-image: url(LOGOSEG2024.jpg);
 		opacity: 1;
 	}
 	66%, 69% {
 		opacity: 0.1;
 	}
 	70%, 100% {
-		background-image: url(ANAMARIA.jpg);
+		background-image: url(LOGOMASGOBIERNODELAGENTE.jpg);
 		opacity: 1;
 	}
 }
@@ -587,4 +587,5 @@ h2,p{
         width: 100%;
     }
 }
+
 
