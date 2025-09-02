@@ -55,14 +55,14 @@ body {
 		opacity: 0.1;
 	}
 	35%, 65% {
-		background-image: url(LOGOSEG2024.jpg);
+		background-image: url(Noticias2.jpg);
 		opacity: 1;
 	}
 	66%, 69% {
 		opacity: 0.1;
 	}
 	70%, 100% {
-		background-image: url(LOGOMASGOBIERNODELAGENTE.jpg);
+		background-image: url(Noticias3.jpg);
 		opacity: 1;
 	}
 }
@@ -591,6 +591,7 @@ h2,p{
         width: 100%;
     }
 }
+
 
 
 
