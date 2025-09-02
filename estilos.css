@@ -30,6 +30,43 @@ body {
     margin-bottom: 0;
 }
 
+
+.banner{
+	width: 700px;
+	height: 300px;
+	border: 3px solid blue;
+	margin: auto;
+
+	background-size: 100% 100%;
+
+	animation: banner 10s infinite;
+}
+
+@keyframes  banner{
+	0%, 30% {
+		background-image: url(Noticias1_911.jpg);
+		opacity: 1;
+	}
+	31%, 34% {
+		opacity: 0.1;
+	}
+	35%, 65% {
+		background-image: url(BRENDAPOZOS.jpg);
+		opacity: 1;
+	}
+	66%, 69% {
+		opacity: 0.1;
+	}
+	70%, 100% {
+		background-image: url(ANAMARIA.jpg);
+		opacity: 1;
+	}
+}
+
+
+
+
+
 .logo-contenedor {
     display: flex;
     align-items: center;
@@ -55,6 +92,7 @@ body {
     float;
     right;
 }
+
 .2Logo-Derecha {
     position: absolute;
     left: 500px;
@@ -549,3 +587,4 @@ h2,p{
         width: 100%;
     }
 }
+
