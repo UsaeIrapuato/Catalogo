@@ -32,8 +32,12 @@ body {
 
 
 .banner{
-	width: 600px;
-	height: 400px;
+/*	width: 600px;	*/
+/*	height: 400px;	*/
+	width: 100%;
+	height: 32%;
+	overflow: hidden;
+
 	border: 1px solid grey;
 	margin: auto;
 
@@ -586,6 +590,7 @@ h2,p{
         width: 100%;
     }
 }
+
 
 
 
