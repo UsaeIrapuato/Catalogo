@@ -38,7 +38,7 @@ body {
 	height: 400px;
 	overflow: hidden;
 
-	border: 1px solid pink;
+	border: 1px solid blue;
 	margin: auto;
 
 	background-size: 100% 100%;
@@ -591,6 +591,7 @@ h2,p{
         width: 100%;
     }
 }
+
 
 
 
