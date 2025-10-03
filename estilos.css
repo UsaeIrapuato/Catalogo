@@ -48,7 +48,7 @@ body {
 
 @keyframes  banner{
 	0%, 30% {
-		background-image: url(Noticias1_911.jpg);
+		background-image: url(Noticias1.jpg);
 		opacity: 1;
 	}
 	31%, 34% {
@@ -591,6 +591,7 @@ h2,p{
         width: 100%;
     }
 }
+
 
 
 
