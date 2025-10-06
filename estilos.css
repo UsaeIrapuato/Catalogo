@@ -45,7 +45,7 @@ body {
 
 	background-size: 100% 100%;
 
-	animation: banner 25s infinite;
+	animation: banner 50s infinite;
 }
 
 
@@ -639,6 +639,7 @@ h2,p{
         width: 100%;
     }
 }
+
 
 
 
